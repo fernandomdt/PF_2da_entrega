@@ -99,7 +99,6 @@ button{
     color: rgb(0, 0, 0);
     border: none;
     transition: 0.5s;
-    float: left;
 } 
 
     button:hover{
@@ -109,25 +108,8 @@ button{
         cursor: pointer;
     }
 
- /* GRID LAYOUT */
 
- #container{
-    display:grid;
-    grid-template-areas:
-        "header"
-        "hero"
-        "about"
-        "films"
-        "video"
-        "footer";
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-    box-sizing: border-box;
-}
-
- header {
-    grid-area: header;
-    display: flex;
+ #header {
     background-color: rgb(236, 223, 213);
     justify-content: space-around;
     align-items: center;
@@ -144,6 +126,39 @@ button{
 
 .headerLogo {
     display: flex;
+}
+
+.header-nav {
+    background-color: rgb(236, 223, 213);
+}
+
+/* .header-span {
+    background-color: rgb(236, 223, 213);
+} */
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}
+
+
+.navbar-toggler{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.navbar-light .navbar-toggler{
+    border-color: none !important;
+
+}
+
+
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+
+.toggler-span button:hover {
+    background-color: none !important;
 }
 
 header a {
