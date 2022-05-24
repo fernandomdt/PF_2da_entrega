@@ -5,6 +5,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: inherit;
 }
 
 /* ESTILOS DE TEXTO */
@@ -161,6 +162,10 @@ button{
     background-color: none !important;
 }
 
+.nav-link {
+    text-align: left;
+}
+
 header a {
     font-family: 'Rubik',Calibri,sans-serif;
     font-size: 15px;
@@ -195,32 +200,44 @@ header ul {
     display: flex;
 }
 
+.hero-image, .container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .hero-text {
     color:white;
     width: 500px;
-    padding: 15% 0 15% 10%;
-    text-align: center;
+    padding: 20% 0 20% 0;
+    text-align: left;
     /* padding-top: 20%; */
     display:flex;
     flex-direction: column;
 }
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 768px){
         .hero-text {
-            width: 100%;
-            padding: 50% 10% 50% 10%;
-            max-height: 700px;
+            width: 80%;
+            padding: 30% 0 30% 10%;
         }
     }
 
 /* SECCION DOS DEL HOME */
 
-#BloqueDos {
-    grid-area: about;
-    display: flex;
-    padding: 10%;
-    justify-content: space-between;
-    gap: 100px;
+.bloqueDos {
+    padding:10% 0 10% 0;
+    gap: 5%;
+}
+
+@media screen and (max-width: 768px){
+    .bloqueDos {
+        flex-direction: column-reverse;
+    }
 }
 
 
@@ -247,15 +264,18 @@ header ul {
 
 /* SECCION TRES DEL HOME */
 
-#BloqueTres{
-    grid-area: films;
-    display: flex;
-    flex-direction: column;
+.BloqueTres{
     background: linear-gradient(-55deg, #f7dcd4, #8dbea5, #f5b46a, #c1b5d7);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
-    padding: 10%;
+    padding:10% 0 10% 0;
 }
+
+    @media screen and (max-width: 768px){
+        .BloqueTres{
+            padding:20% 0 20% 0;
+        }
+    }
 
 @keyframes gradient {
 	0% {
@@ -279,20 +299,20 @@ header ul {
     }
 
 .Filmes{
-    display: flex;
-    justify-content: space-between;
-    padding: 3%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 5%;
 
 }
 
 .Filmes img{
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
     cursor:pointer;
 }
 
 .Filmes img:hover{
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    transform: translateY(-10%);
+    transform: translateY(-7%);
     /* transition-timing-function: var(--bounce-out); */
   }
 
@@ -328,32 +348,49 @@ header ul {
 
 /* VIDEO IFRAME */
 
-#Video{
-    grid-area: video;
-    display: flex;
+.video{
+    height:700px; 
+    width:100%;
 }
+
+        @media screen and (max-width: 768px){
+            .video{
+                height:500px; 
+            }
+        }
+
+
+        @media screen and (max-width: 500px){
+            .video{
+                height:450px; 
+            }
+        }
 
 /* FOOTER DEL SITIO */
 
-#footer{
+.footer{
     display: flex;
-    grid-area: footer;
-    padding:3%;
+    padding:3% 0 3% 0;
     background-color: rgb(236, 223, 213);
     align-items: center;
     justify-content: space-between;
-} 
+    box-sizing: border-box;
+}
 
-#footer p{
+.footer-container{
+    background-color: rgb(236, 223, 213);
+}
+
+.footer p{
     padding-bottom: 0px;
 }
 
-#footer a:hover{
+.footer a:hover{
     opacity: 0.5;
     transition: 0.5s;
 }
 
-    #footer a:hover{
+    .footer a:hover{
         opacity: 0.2;
     }
 
@@ -364,7 +401,7 @@ header ul {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     #header {
         display: block;
     }
@@ -378,11 +415,6 @@ header ul {
         justify-content: center;
     }
 
-    #BloqueDos {
-        display: flex;
-        flex-direction: column-reverse;
-        gap:0;
-    }
 
     .Imagen-BloqueDos{ 
         margin: auto;
@@ -395,12 +427,9 @@ header ul {
         margin: 0 auto;
     }
 
-    #BloqueTres {
-        width: 80%;
-    }
     
     .Section3texto{
-        width:100%;
+        width:90%;
         margin: auto;
     }
     
@@ -419,7 +448,7 @@ header ul {
 
     }
 
-    #footer{
+    .footer{
         display: flex;
         flex-direction: column;
         padding:10% 90px 10% 90px;
@@ -427,7 +456,7 @@ header ul {
         margin: 0 auto;
     }
     
-    #footer p{
+    .footer p{
         text-align: center;
     }
 
@@ -445,61 +474,34 @@ header ul {
 
 /* SECCION UNO DE BIOGRAFIA */
 
-#bio-ontainer{
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-    box-sizing: border-box;
-}
 
-/* header{
-    grid-area: header;
-    display: flex;
-}
-
-main{
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-    display: flex;
-} */
-
-#BioBloque1{
+.BioBloque1{
     display: flex;
     flex-direction: column;
 }
 
 .Bio-img{
     overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url(../Images/Biography-img1.jpg);
     background-position:center;
-    height: 400px;
-}
-
-#BioBloque2{
-    display: flex;
-    flex-direction: column;
+    padding:20%;
 }
 
 
 .Bio-Cabeza {
-    padding: 100px;
+    padding: 10% 0 0 0;
     text-align: center;
 }
     .Bio-Cabeza h1, img{
         text-align: center;
     }
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 768px){
         .Bio-Cabeza {
             width: 80%;
-            padding: 100px 0 0 0;
+            padding: 15% 0 0 0;
             margin: 0 auto;
         }
     }
@@ -516,7 +518,7 @@ footer {
 
 }
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 768px){
         .Bio-text {
             width: 80%;
             margin:0 auto;
@@ -542,7 +544,7 @@ footer {
     transform: scale(1.12); 
     filter: hue-rotate(235deg);
 }
-        @media screen and (max-width: 767px){
+        @media screen and (max-width: 768px){
             .BioCabeza-img{
                 width:80%;
                 height: 500px;
@@ -551,19 +553,34 @@ footer {
         }
 /* SECCION DOS DE BIOGRAFIA */
 
-#QuoteSection-flex{
-    display: flex;
+.quote {
+    background-color: rgb(181, 192, 183);
 }
 
 .QuoteSection{
     background-color: rgb(181, 192, 183);
-    padding: 10%;
+    padding: 80px 0 80px 0;
+    width: 800px;
 }
+
+        @media screen and (max-width: 768px){
+            .QuoteSection{
+                padding: 10% 0 10% 0;
+                width: 90%;
+            }
+            
+        }
+
+        @media screen and (max-width: 500px){
+            .QuoteSection{
+                padding: 20% 0 20% 0;
+            }
+            
+        }
 
 /* SECCION TRES DE BIOGRAFÍA */
 
 .BioImageGllery {
-    display: flex;
     gap: 20px;
     justify-content: center;
     padding: 2% 0;

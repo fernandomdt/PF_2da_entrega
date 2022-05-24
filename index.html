@@ -41,31 +41,19 @@
                 </header>
             </div>
         </div>
-        <!-- <header id="header">
-            <div class="headerLogo">
-                <a href="index.html"><img src="Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
-            </div> 
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Homepage</a></li>
-                        <li><a href="Pages/Biografia.html">Biografía</a></li>
-                        <li><a href="Pages/Filmografia.html">Filmografía</a></li>
-                         <li><a href="Pages/Obras.html">Obras</a></li>
-                        <li><a href="Pages/Contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>    
-        </header> -->
         <!-- TERMINA HEADER -->
         <!-- INICIA CONTENIDO -->
         <main>
             <section id="hero">
-                <div class="hero-image">
-                    <div class="hero-text">
-                    <h1>Wild at heart & weird on top</h1>
-                    <p>David Lynch is an American filmmaker, painter, writer, actor, and musician.He has been labeled as "the first popular Surrealist" by critics. He received the Academy Honorary Award in 2019.</p>
-                    <button a href="./Pages/Biografia.html">Conoce más</button>
+                <div class="container-fluid hero-image">
+                    <div class="container">
+                        <div class="hero-text">
+                            <div class="col-12">
+                                <h1>Wild at heart & weird on top</h1>
+                                <p>David Lynch is an American filmmaker, painter, writer, actor, and musician.He has been labeled as "the first popular Surrealist" by critics. He received the Academy Honorary Award in 2019.</p>
+                                <button a href="Pages/Biografia.html">Conoce más</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -75,7 +63,7 @@
                     </div>
                 </a>
             </section>
-            <section id="BloqueDos">
+            <div class="container d-flex bloqueDos">
                 <div class="Imagen-BloqueDos">
                     <img src="Images/Homepage-section2.jpg" alt="Homepage-section2">
                     <p>+++ HOVER ME</p>
@@ -84,13 +72,13 @@
                     <h2>Acerca de David Lynch</h2>
                     <p>Praesent eu pellentesque tortor, ut fringilla purus. Duis quis finibus purus. Aenean auctor accumsan orci quis molestie. Ut tortor sem, consectetur eu turpis in, gravida eleifend leo. Euismod erat id sem ornare, eu eleifend mauris. Pellentesque commodo magna rutrum finibus auctor.Phasellus consectetur nec felis a pulvinar. Morbi vulputate dignissim ex ac rutrum. Lorem ipsum dolor sit amet, consec adipiscing elit. Nulla lobortis auctor convallis.</p>
                 </div>
-            </section>
-            <section id="BloqueTres">
-                <div class="Section3texto">
+            </div>
+            <div class="container-fluid BloqueTres">
+                <div class="container Section3texto">
                     <h3>Películas destacadas</h3>
                     <p>Phasellus consectetur nec felis a pulvinar. Morbi vulputate dignissim ex ac rutrum. Lorem ipsum dolor sit amet, consec adipiscing elit. </p>
                 </div>
-                <div class="Filmes">
+                <div class="container d-flex Filmes">
                     <article>
                         <img src="Images/Homepage-section3-img1.jpg" alt="Homepage-section2">
                         <h4>Eraserhead (1960)</h4>
@@ -108,25 +96,27 @@
                         <h4>Inland Empire (1960)</h4>
                     </article>
                 </div>
-            </section>
-            <section id="Video">
-                <iframe height="900" width="100%" src="https://www.youtube.com/embed/j8-KTdNdizE?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
+            </div>
+            <div class="container-fluid">
+                <iframe class="video" src="https://www.youtube.com/embed/j8-KTdNdizE?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </main>
         <!-- TERMINA CONTENIDO -->
         <!-- INICIA FOOTER -->
-        <footer id="footer">
-            <div>
-                <a href="index.html"><img src="Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
-            </div>
-            <div>
-                <p>Copyright ©David Lynch 2022	Aviso de privacidad	Términos y condiciones </p>
-            </div>
-            <div class="Social-logos">
-                <a href="https://www.facebook.com/"><img src="Images/Lynch-footer-redes1.png" alt="Facebook"></a>
-                <a href="https://instagram.com"><img src="Images/Lynch-footer-redes2.png" alt="Instagram"></a>
-                <a href="https://Youtube.com"><img src="Images/Lynch-footer-redes3.png" alt="Youtube"></a> 
-            </div>      
+        <footer class="container-fluid footer-container">
+            <div class="container footer">
+                <div>
+                    <a href="index.html"><img src="Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
+                </div>
+                <div>
+                    <p>Copyright ©David Lynch 2022	Aviso de privacidad	Términos y condiciones </p>
+                </div>
+                <div class="Social-logos">
+                    <a href="https://www.facebook.com/"><img src="Images/Lynch-footer-redes1.png" alt="Facebook"></a>
+                    <a href="https://instagram.com"><img src="Images/Lynch-footer-redes2.png" alt="Instagram"></a>
+                    <a href="https://Youtube.com"><img src="Images/Lynch-footer-redes3.png" alt="Youtube"></a> 
+                </div>
+            </div>     
         </footer>
         <!-- TERMINA FOOTER -->   
    <!-- Bootstrap JS -->

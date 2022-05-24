@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap">
@@ -12,33 +14,40 @@
     <title>David Lynch | Biografía</title>
 </head>
 <body>
-     <!--INICIA CODIGO DE CONTENEDOR PADRE-->
-    <div id="bio-ontainer">
-            <!--INICIA HEADER-->
-            <header id="header">
-                <div class="headerLogo">
-                    <a href="../index.html"><img src="../Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
-                </div>
-                <div>
-                    <nav> 
-                        <ul>
-                            <li><a href="../index.html">Homepage</a></li>
-                            <li><a href="../Pages/Biografia.html">Biografía</a></li>
-                            <li><a href="../Pages/Filmografia.html">Filmografía</a></li>
-                            <li><a href="../Pages/Obras.html">Obras</a></li>
-                            <li><a href="../Pages/Contacto.html">Contacto</a></li>
-                        </ul>
+        <!--INICIA HEADER-->
+        <div class="header-nav">
+            <div class="container">
+                <header id="header">
+                    <nav class="navbar navbar-expand-lg navbar-light navbar-justify">
+                        <div class="container-fluid">
+                            <div class="headerLogo">
+                                <a href="../index.html"><img src="../Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
+                            </div> 
+                        <div class="navbar-toggler toggler-span" type="toggler-icon" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav header-span">
+                            <a class="nav-link" href="../index.html">Homepage</a>
+                            <a class="nav-link active" aria-current="page" href="../Pages/Biografia.html">Biografía</a>
+                            <a class="nav-link" href="../Pages/Filmografia.html">Filmografía</a>
+                            <a class="nav-link" href="../Pages/Obras.html">Obras</a>
+                            <a class="nav-link" href="../Pages/Contacto.html">Contacto</a>
+                            </div>
+                        </div>
+                        </div>
                     </nav>
-                </div>    
-            </header>
+                </header>
+            </div>
+        </div>
         <!-- TERMINA HEADER -->
         <!-- INICIA CONTENIDO -->
         <main>
-            <Section id="BioBloque1">
+            <div class="container-fluid BioBloque1">
                 <div class="Bio-img">
                 </div>
-            </Section>
-            <Section id="BioBloque2">
+            </div>
+            <div class="container d-flex flex-column BioBloque2">
                 <div class="Bio-Cabeza">
                     <h1>
                         David Keith Lynch
@@ -50,16 +59,15 @@
                 <div class="Bio-text">
                     <h2>La vida de un onironauta</h2>
                     <p>David Lynch (American, b.1946) is best known as a prolific modern filmmaker. However, his work stretches out into the world of television, music, painting, and many other forms of art. His style is often characterized as surrealist, and he has even been branded with his own style, called Lynchian Style. Lynch was born in Missoula, MT, and moved around from place to place until he landed in Philadelphia, PA, where he enrolled in the Pennsylvania Academy of Fine Arts.</p>
-                    <p>After a stint in Philadelphia, he moved to Los Angeles, CA, where he launched his film career. While working at the AFI Conservatory, Lynch created his first motion picture, Eraserhead (1977), a black-and-white surrealist horror film. The film was not acclaimed by critics, but it has held a strong cult following since its release. It wasn''t until the film The Elephant Man (1980) that Lynch received his first real taste of critical and commercial success. The film received eight Academy Award nominations, including Best Director. More importantly, Lynch became a household name, whose art has reached millions of viewers. Along with several feature films, Lynch has created many short films, several television series, and even some music videos.</p>
                     <p>Although most commonly known for his films, Lynch initially studied to be a painter. Lynch’s painting is characterized by its absence of color. He believes that black is a liberating factor and uses it to make his works become more dreamlike. In 2007, a major art retrospective on Lynch, The Air is on Fire, was displayed at the Fondation Cartier in Paris. This exhibition contained paintings, photographs, drawings, and other work, including site-specific installations.</p>
                 </div>
-            </Section>
-            <Section id="QuoteSection-flex">
-                <div class="QuoteSection">
+            </div>
+            <div class="container-fluid quote">
+                <div class="container QuoteSection">
                     <h3>“I don't remember my dreams too much. I hardly have ever gotten ideas from nighttime dreams. But I love daydreaming and dream logic and the way dreams go.”</h3>
                 </div>
-            </Section>
-            <Section class="BioImageGllery">
+            </div>
+            <div class="container-fluid d-flex BioImageGllery">
                 <article>
                     <img src="../Images/Biography-img3.jpg" alt="Lynch-bio-3">
                 </article>
@@ -69,7 +77,7 @@
                 <article>
                     <img src="../Images/Biography-img5.jpg" alt="Lynch-bio-5">
                 </article>
-            </Section> 
+            </div>
             <section class="fixed-image">
                 <a href="https://c.tenor.com/D3eAYMCiX90AAAAC/david-lynch-what-did-jack-do.gif">
                     <div class="Imagen-fixed">
@@ -79,20 +87,23 @@
         </main>
         <!-- TERMINA CONTENIDO -->
         <!-- INICIA FOOTER -->
-        <footer id="footer">
-            <div>
-                <a href="../index.html"><img src="../Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
-            </div>
-            <div>
-                <p>Copyright ©David Lynch 2022	Aviso de privacidad	Términos y condiciones </p>
-            </div>
-            <div class="Social-logos">
-                <a href="https://www.facebook.com/"><img src="../Images/Lynch-footer-redes1.png" alt="Facebook"></a>
-                <a href="https://instagram.com"><img src="../Images/Lynch-footer-redes2.png" alt="Instagram"></a>
-                <a href="https://Youtube.com"><img src="../Images/Lynch-footer-redes3.png" alt="Youtube"></a> 
-            </div>      
+        <footer class="container-fluid footer-container">
+            <div class="container footer">
+                <div>
+                    <a href="../index.html"><img src="../Images/David-Lynch-logo.png" alt="Lynch-Homepage"></a>
+                </div>
+                <div>
+                    <p>Copyright ©David Lynch 2022	Aviso de privacidad	Términos y condiciones </p>
+                </div>
+                <div class="Social-logos">
+                    <a href="https://www.facebook.com/"><img src="../Images/Lynch-footer-redes1.png" alt="Facebook"></a>
+                    <a href="https://instagram.com"><img src="../Images/Lynch-footer-redes2.png" alt="Instagram"></a>
+                    <a href="https://Youtube.com"><img src="../Images/Lynch-footer-redes3.png" alt="Youtube"></a> 
+                </div>
+            </div>     
         </footer>
         <!-- TERMINA FOOTER -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
 </body>
 </html>
